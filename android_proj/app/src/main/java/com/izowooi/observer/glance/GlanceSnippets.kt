@@ -6,22 +6,10 @@ import androidx.glance.GlanceId
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
 import androidx.glance.appwidget.provideContent
+import androidx.glance.layout.Column
+import androidx.glance.layout.Row
 
 class MyAppWidgetReceiver : GlanceAppWidgetReceiver() {
-    override val glanceAppWidget: GlanceAppWidget = MyAppWidget()
+    override val glanceAppWidget: GlanceAppWidget = ServerStatusWidget()
 }
 
-class MyAppWidget : GlanceAppWidget() {
-
-    override suspend fun provideGlance(context: Context, id: GlanceId) {
-
-        // In this method, load data needed to render the AppWidget.
-        // Use `withContext` to switch to another thread for long running
-        // operations.
-
-        provideContent {
-            // create your AppWidget here
-            Text("Hello World")
-        }
-    }
-}
