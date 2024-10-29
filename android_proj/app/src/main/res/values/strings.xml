@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">observer</string>
+    <string name="widget_name">observer_widget</string>
+</resources>
